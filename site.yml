@@ -3,6 +3,7 @@
   vars:
   - param: 2
   roles:
+  - a
   - { role: a }
   - { role: a, tags: ['aTag'] }
   - { role: a, param: 1 }
