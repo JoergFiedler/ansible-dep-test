@@ -1,0 +1,29 @@
+./a/tasks/main.yml
+---
+- debug: msg=Hello from a.
+./b_depends_a/meta/main.yml
+---
+dependencies:
+- a
+./b_depends_a/tasks/main.yml
+---
+- debug: msg=Hello from b.
+./c_depends_a/meta/main.yml
+---
+dependencies:
+- a
+./c_depends_a/tasks/main.yml
+---
+- debug: msg=Hello from c.
+./empy
+./hosts
+default              ansible_connection=local
+
+./site.yml
+---
+- hosts: default
+  roles:
+  - { role: a, param: 1 }
+  - b_depends_a
+  - c_depends_a
+
