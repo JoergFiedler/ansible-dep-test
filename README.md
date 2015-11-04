@@ -1,5 +1,5 @@
 # ansible-dep-test
 
-Excute with:
+Execute with:
 
     ansible-playbook -i hosts site.yml
