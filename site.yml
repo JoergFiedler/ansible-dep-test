@@ -1,6 +1,10 @@
 ---
 - hosts: default
+  vars:
+  - param: 2
   roles:
+  - { role: a }
+  - { role: a, tags: ['aTag'] }
   - { role: a, param: 1 }
   - b_depends_a
   - c_depends_a

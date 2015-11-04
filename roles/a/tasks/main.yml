@@ -1,2 +1,2 @@
 ---
-- debug: msg=Hello from a.
+- debug: msg='Hello from a param = {{ param }}'
